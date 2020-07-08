@@ -1,6 +1,6 @@
-from setuptools import setup
+import setuptools
 
-setup(
+setuptools.setup(
     name='chainwalkers_utils',
     version='0.0.2',
     description='Collection of utilities to be used across chainwalkers repos',
