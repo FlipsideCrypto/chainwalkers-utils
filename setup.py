@@ -8,6 +8,6 @@ setup(
     author='Brian Ford',
     author_email='brian@flipsidecrypto.com',
     license='unlicense',
-    packages=setuptools.find_packages()
+    packages=setuptools.find_packages(),
     zip_safe=False
 )
