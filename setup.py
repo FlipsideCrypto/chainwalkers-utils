@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='chainwalkers_utils',
-    version='0.0.1',
+    version='0.0.2',
     description='Collection of utilities to be used across chainwalkers repos',
     url='git@github.com:FlipsideCrypto/chainwalkers-utils.git',
     author='Brian Ford',
