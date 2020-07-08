@@ -1,1 +1,1 @@
-from .TendermintRPC import TendermintRPC
+from tendermint.rpc import TendermintRPC
