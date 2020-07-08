@@ -3,7 +3,7 @@ import requests
 
 class TendermintRPC:
 
-    def __init(self, node_url):
+    def __init__(self, node_url):
         self.node_url = node_url
 
     def get_block_height(self):
