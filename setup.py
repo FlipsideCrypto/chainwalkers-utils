@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='chainwalkers_utils',
+    name='tendermint',
     version='0.0.1',
     description='Collection of utilities to be used across chainwalkers repos',
     url='git@github.com:FlipsideCrypto/chainwalkers-utils.git',
