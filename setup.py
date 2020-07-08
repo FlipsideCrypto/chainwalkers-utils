@@ -1,4 +1,4 @@
-from setuptools import setyp
+from setuptools import setup
 
 setup(
     name='chainwalkers_utils',
