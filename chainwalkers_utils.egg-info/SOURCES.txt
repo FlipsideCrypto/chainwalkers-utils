@@ -1,8 +1,12 @@
+README.md
 setup.py
 chainwalkers_utils.egg-info/PKG-INFO
 chainwalkers_utils.egg-info/SOURCES.txt
 chainwalkers_utils.egg-info/dependency_links.txt
 chainwalkers_utils.egg-info/not-zip-safe
 chainwalkers_utils.egg-info/top_level.txt
-tendermint/__init__.py
-tendermint/rpc.py
+eth_utils/__init__.py
+eth_utils/decimals.py
+eth_utils/jsonrpc.py
+tendermint_utils/__init__.py
+tendermint_utils/rpc.py

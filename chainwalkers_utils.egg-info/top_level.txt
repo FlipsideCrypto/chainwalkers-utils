@@ -1,1 +1,2 @@
-tendermint
+eth_utils
+tendermint_utils
