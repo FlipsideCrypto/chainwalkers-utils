@@ -38,9 +38,9 @@ class TendermintRPC:
             
             block.end_block = block_results['results']['end_block']
 
-            block_validators = self.get_block_validators(height)
-            for validator in block_validators['validators']:
-                block.validators.append(validator)
+            # block_validators = self.get_block_validators(height)
+            # for validator in block_validators['validators']:
+            #     block.validators.append(validator)
 
             return block
         except Exception as err:
@@ -83,3 +83,6 @@ class TendermintRPC:
             return data['result']
         except Exception as err:
             print(f'An error occured retrieving the validators for block height: {err}')
+    
+    def init_block(self, blockDict):
+        return BlockSchema(blockDict)

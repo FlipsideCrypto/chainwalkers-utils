@@ -10,3 +10,4 @@ eth_utils/decimals.py
 eth_utils/jsonrpc.py
 tendermint_utils/__init__.py
 tendermint_utils/rpc.py
+tendermint_utils/schema.py
