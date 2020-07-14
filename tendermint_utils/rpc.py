@@ -48,7 +48,7 @@ class TendermintRPC:
             response = requests.get(self.node_url + '/tx?hash=' + tx_hash)
             response.raise_for_status()
             data = response.json()
-            return data
+            return data['result']
         except Exception as err:
             print(f'An error occured retrieving the transaction by hash: {err}')
 
