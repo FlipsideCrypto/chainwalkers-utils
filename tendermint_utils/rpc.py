@@ -35,7 +35,7 @@ class TendermintRPC:
     def get_transactions_by_block(self, height, limit=None):
         try:
             if limit is not None:
-                response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true&limit=' + limit)
+                response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true&per_page=' + str(limit))
             else:
                 response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true')
             response.raise_for_status()
