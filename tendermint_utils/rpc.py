@@ -37,7 +37,7 @@ class TendermintRPC:
             if limit is not None:
                 response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true&per_page=' + str(limit) + '&page=' + str(page))
             else:
-                response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true&page=' + str(page)')
+                response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true&page=' + str(page))
             response.raise_for_status()
             data = response.json()
             return data['result']
