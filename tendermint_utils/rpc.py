@@ -32,12 +32,12 @@ class TendermintRPC:
         except Exception as err:
             print(f'An error occured retrieving the results of block height: {err}')
 
-    def get_transactions_by_block(self, height, limit=None):
+    def get_transactions_by_block(self, height, limit=None, page=1):
         try:
             if limit is not None:
-                response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true&per_page=' + str(limit))
+                response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true&per_page=' + str(limit) + '&page=' + str(page))
             else:
-                response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true')
+                response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true&page=' + str(page)')
             response.raise_for_status()
             data = response.json()
             return data['result']
