@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='chainwalkers_utils',
-    version='0.0.8',
+    version='0.0.9',
     description='Collection of utilities to be used across chainwalkers repos',
     long_description=long_description,
     long_description_content_type="text/markdown",
