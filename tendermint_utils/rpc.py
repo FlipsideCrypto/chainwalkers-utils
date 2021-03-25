@@ -8,7 +8,6 @@ class TendermintRPC:
     def get_block_height(self):
         try:
             response = requests.get(self.node_url+ '/abci_info?')
-            response.raise_for_status()
             data = response.json()
             return data['result']['response']['last_block_height']
         except Exception as err:
@@ -17,7 +16,6 @@ class TendermintRPC:
     def get_block(self, height):
         try:
             response = requests.get(self.node_url + '/block?height=' + str(height))
-            response.raise_for_status()
             data = response.json()
             return data['result']
         except Exception as err:
@@ -38,7 +36,6 @@ class TendermintRPC:
                 response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true&per_page=' + str(limit) + '&page=' + str(page))
             else:
                 response = requests.get(self.node_url + '/tx_search?query=\"tx.height=' + str(height) + '\"&prove=true&page=' + str(page))
-            response.raise_for_status()
             data = response.json()
             return data['result']
         except Exception as err:
@@ -49,7 +46,6 @@ class TendermintRPC:
             if hex_prefix:
                 tx_hash = '0x' + tx_hash
             response = requests.get(self.node_url + '/tx?hash=' + tx_hash)
-            response.raise_for_status()
             data = response.json()
             return data['result']
         except Exception as err:
@@ -58,7 +54,6 @@ class TendermintRPC:
     def get_block_validators(self, height):
         try:
             response = requests.get(self.node_url + '/validators?height=' + str(height))
-            response.raise_for_status()
             data = response.json()
             return data['result']
         except Exception as err:
